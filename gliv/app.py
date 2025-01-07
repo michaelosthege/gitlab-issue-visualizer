@@ -69,7 +69,7 @@ def run():
             return False
         if selected_labels:
             if not i.labels and show_unlabeled:
-                return True
+                return i.project_id in pids_selected
             if not any(l in selected_labels for l in i.labels):
                 return False
         return i.project_id in pids_selected
